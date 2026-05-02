@@ -16,7 +16,8 @@ var descElement = document.getElementById(id) ;
 
     if (descElement.style.display == "none") {
         descElement.style.display = "block";
-    } else {
+    }
+    else {
         descElement.style.display = "block ";
         descElement.style.display = "none";
     }
