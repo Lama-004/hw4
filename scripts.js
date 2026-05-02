@@ -43,7 +43,7 @@ if (quote) {
 
 
 function addDate (){
-    var footer = document.getElementById("myFooter");
+    var footer = document.getElementById("footer");
         var date = Date();
         var message = document.createTextNode("Page loaded on: " + date);
         var paragraph = document.createElement("p");
