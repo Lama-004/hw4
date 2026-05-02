@@ -44,13 +44,11 @@ if (quote) {
 
 function addDate (){
     var footer = document.getElementById("myFooter");
-    if (footer) {
         var date = Date();
         var message = document.createTextNode("Page loaded on: " + date);
         var paragraph = document.createElement("p");
         paragraph.appendChild(message);
         footer.appendChild(paragraph);
-    }
 }
 
 window.onload = addDate;
