@@ -17,10 +17,9 @@ var descElement = document.getElementById(id) ;
     if (descElement.style.display == "none") {
         descElement.style.display = "block";
     }
-    else {
-        descElement.style.display = "block ";
+    else 
         descElement.style.display = "none";
-    }
+    
 }
 
 
@@ -29,6 +28,7 @@ var quote = document.getElementById("quote");
 
 function onMouseOver(){
 quote.style.backgroundColor = "blue";
+    
 }
 
 function onMouseOut() {
