@@ -1,55 +1,48 @@
-function formValidation() {
+function formValidation(){
     var firstName = document.getElementById("first").value;
     var lastName = document.getElementById("last").value;
     var email = document.getElementById("email").value;
-
-    if (firstName == ""|| lastName =="" || email == "") {
+    if (firstName == "" || lastName == "" || email == "") {
         alert("Please fill out all required fields");
         return false;
     }
 }
 
-
-
-function descriptionToggle(id) {
-var descElement = document.getElementById(id) ;
-
+function descriptionToggle(id){
+    var descElement = document.getElementById(id);
     if (descElement.style.display == "none") {
-        descElement.style.display = "block";
-    }
+        descElement.style.display = "block" ;
+    } 
     else 
-        descElement.style.display = "none";
+        descElement.style.display = "none";  
     
 }
-
-
 
 var quote = document.getElementById("quote");
 
-function onMouseOver(){
-quote.style.backgroundColor = "blue";
-    
+function onMouseOver() {
+    quote.style.backgroundColor = "blue" ;
+    quote.style.fontStyle = "";  
 }
 
-function onMouseOut() {
+function onMouseOut (){
     quote.style.backgroundColor = "";
     quote.style.fontStyle = "italic";
 }
 
-if (quote) {
+if (quote){
     quote.addEventListener("mouseover", onMouseOver);
-    quote.addEventListener("mouseout", onMouseOut) ;
+    quote.addEventListener("mouseout", onMouseOut);
+}
+
+function addDate(){
+    var footer = document.getElementById("footer"); 
+    var date = Date() ;
+    var message = document.createTextNode("Page loaded on: " + date);
+    var paragraph = document.createElement("p");
+    paragraph.appendChild(message);
+    footer.appendChild(paragraph);
 }
 
 
-
-function addDate (){
-    var footer = document.getElementById("footer");
-        var date = Date();
-        var message = document.createTextNode("Page loaded on: " + date);
-        var paragraph = document.createElement("p");
-        paragraph.appendChild(message);
-        footer.appendChild(paragraph);
-}
-
-window.onload = addDate;
+window.addEventListener("load", addDate); 
